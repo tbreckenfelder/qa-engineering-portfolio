@@ -1,40 +1,89 @@
-## **The software**
+## **Die Software**
 
----
+--- 
 Webshop: https://grocerymate.masterschool.com/
 
-With the following basic functions:
+Mit folgenden Basisfunktionen:
 
-- Registration and login
-- Product search with sorting function (e.g., by price), product categorization
+- Registrierung und Anmeldung
+- Produktsuche mit Sortierfunktion (z. B. nach Preis), Produktkategorisierung
+- Produkte zu Favoriten hinzufügen
+- Produkte in den Warenkorb legen
+- Bestellabwicklung: Rechnungs- und Lieferadresse eingeben, Zahlungsart auswählen, Gesamtbetrag berechnen
 
-- Adding products to favorites
-- Adding products to the shopping cart
-- Order completion: Entering billing and shipping information, selecting the payment method, price calculation (total amount)
-
-
-## **New Features**
+## **Neue Funktionen**
 
 ---
 
-### **1. Product Rating System**
+## **1. Product Rating System**
 
-**Originally vaguely formulated requirement:**
+Nutzer sollen Produkte anhand eines 5-Sterne-Systems bewerten.
 
-Users should be able to rate products using a 5-star system and also leave written feedback.
+**Vage formulierte** Anforderung:
+* **Frage 1:** Nach welchem Status (wann) darf der Nutzer eine Bewertung abgeben?
+* **Frage 2:** Zu welchem Zeitpunkt soll die Bewertung angezeigt werden?
+* **Frage 3:** Darf der Nutzer eine abgegebene Bewertung löschen oder ändern?
+
+
+Nutzer sollen zusätzlich ein schriftliches Feedback hinterlassen können.
+
+**Vage formulierte** Anforderung:
+* **Frage 4:** Soll das Feedbackfeld ein Pflichtfeld sein?
+* **Frage 5:** Soll das Feedback vor der Veröffentlichung durch einen Filter geprüft werden?
+* **Frage 6:** Soll die Anzahl der Zeichen begrenzt werden?
+
+Besser:
+
+**Konkret formulierte** Anforderung:
+* **Frage 1:** Erst wenn der Kauf des Produkts  abgeschlossen ist können Bewertungen abgegeben werden.
+* **Frage 2:** Die abgegebene Bewertung soll angezeigt werden, wenn der Artikel im Shop erneut angezeigt wird.
+* **Frage 3:** Der Nutzer darf eine abgegebene Bewertung nicht löschen oder ändern.
+
+* **Frage 4:** Das Feedbackfeld soll ein Pflichtfeld sein.
+* **Frage 5:** Das Feedback soll vor der Veröffentlichung durch einen Filter (z.B. Schimpfwort- oder Profanity) geprüft werden.
+* **Frage 6:** Die Anzahl der Zeichen soll auf 50 Zeichen begrenzt sein.
 
 ---
 
-### **2. Age Verification for Alcoholic Products**
+## **2. Altersverifikation für alkoholische Produkte**
 
-**Originally vaguely formulated requirement:**
+Alkoholische Produkte erfordern eine Altersverifikation. 
 
-Alcoholic products require age verification. When accessing the category, a modal should appear where users must enter their age (18+) before gaining access.
+**Vage formulierte** Anforderung:
+* **Frage 1:** Wann soll das A-Modal aufgerufen werden?
+* **Frage 2:** Muss ein einmal registrierter Nutzer immer wieder das Modal ausfüllen?
+* **Frage 3:** Wird eine Identitätsprüfung durchgeführt?
+
+Beim Aufrufen der Kategorie soll ein Modal erscheinen, in dem Nutzer ihr Alter angeben müssen (18+), bevor sie Zugriff erhalten.
+
+**Vage formulierte** Anforderung:
+* **Frage 4:** Kann das Modal umgangen werden?
+* **Frage 5:** In welchem Format soll das Geburtsdatum angegeben werden? 
+* **Frage 6:** Was passiert bei der Bestätigung des Nutzers < 18J? 
+
+Besser:
+
+**Konkret formulierte** Anforderung:
+* **Frage 1:** Sobald die Kategorie „Alkoholische Produkte“ oder ein Produkt dieser Kategorie aufgerufen wird, muss das A-Modal angezeigt werden.
+* **Frage 2:** Das System speichert die Bestätigung („18+“) lokal im Browser (z. B. Cookie oder Local Storage) für eine definierte Dauer (z. B.14 Tage), sodass das Modal nicht bei jedem Aufruf erneut erscheint. Danach erscheint das Modal erneut.
+* **Frage 3:** Die Altersverifikation dient ausschließlich der Zugangsbeschränkung, nicht der Identitätsprüfung.
+
+* **Frage 4:** Das Modal soll den Seiteninhalt blockieren, bis eine Auswahl getroffen wurde.
+* **Frage 5:** Das Geburtsdatum soll im Format {TTMMJJJJ} angegeben werden.
+* **Frage 6:** Bei der Bestätigung („< 18“) wird der Nutzer auf eine Seite ohne alkoholische Inhalte weitergeleitet (z. B. Startseite).
 
 ---
 
-### **3. Changes to Shipping Costs**
+## **3. Änderungen der Versandkosten**
 
-**Originally vaguely formulated requirement: 1**
+Für Bestellungen über einem bestimmten Wert entfallen die Versandkosten. Für Bestellungen unter diesem Wert fallen Versandkosten an.
 
-Shipping costs are waived for orders above a certain value. Shipping costs apply for orders below this value.
+**Vage formulierte** Anforderung:
+* **Frage 1:** Ab welchem Bestellwert entfallen die Versandkosten? 
+* **Frage 2:** Werden die Versandkosten pro Bestellung oder pro Artikel berechnet, bevor geprüft wird, ob der Schwellenwert erreicht wurde?
+* **Frage 3:** Was passiert, wenn ein Nutzer Produkte entfernt oder hinzufügt – werden die Versandkosten sofort neu berechnet und angezeigt?
+
+**Konkret formulierte** Anforderung:
+* **Frage 1:** Die Versandkosten entfallen ab einem Bestellwert von >= 20€.
+* **Frage 2:** Die Versandkosten pro Bestellung oder pro Artikel werden berechnet, bevor geprüft wird, ob der Schwellenwert erreicht ist.
+* **Frage 3:** Fügt ein Nutzer Produkte hinzu oder löscht – werden die Versandkosten sofort neu berechnet und angezeigt,
