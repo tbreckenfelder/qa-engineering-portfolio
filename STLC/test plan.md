@@ -1,166 +1,188 @@
-## **Test Plan & Test Case Design**
-**Test Object (System under test):**
+## **Testplan & Testfalldesign**
+**Testobjekt (zu testendes System):**
 
 **Webshop: https://grocerymate.masterschool.com/**
 
-***I am using the previously formulated requirements as the basis for the test plan.***
+***Ich verwende die zuvor formulierten Anforderungen als Grundlage für den Testplan.***
 
 ---
-## **1. Product Analysis**
+## **1. Produktanalyse**
 
-**Objective: What is the goal of the product?**
+**Zielsetzung: Was ist das Ziel des Produkts?**
 
-- The main goal of the product is to expand the existing shop with 3 new functions (see below) and to ensure the smooth functionality of existing features.
+- Das Hauptziel des Produkts ist die Erweiterung des bestehenden Shops um drei neue Funktionen (siehe unten) und die Gewährleistung der reibungslosen Funktion der bestehenden Funktionen.
 
-**Target User Group (Stakeholders): Who uses the product? Who are the relevant stakeholders on the user side?**
+**Zielgruppe (Stakeholder): Wer nutzt das Produkt? Wer sind die relevanten Stakeholder auf Nutzerseite?**
 
-- The product is aimed at new and existing users of the platform, regardless of age, and users aged 18 and over (alcoholic beverages).
+- Das Produkt richtet sich an neue und bestehende Nutzer der Plattform, unabhängig vom Alter, sowie an Nutzer ab 18 Jahren (für alkoholische Getränke).
 
-**Hardware and Software Specifications:**
-Devices with standard configurations will be used.
+**Hardware- und Software-Spezifikationen:** Es werden Geräte mit Standardkonfigurationen verwendet.
 
-**Hardware Requirements:**
 
-- Devices: PCs, laptops, smartphones, tablets
-- Minimum requirements: 4 GB RAM, 2 GHz processor
+**Hardware-Anforderungen:**
 
-**Software Requirements:**
+- Geräte: PCs, Laptops, Smartphones, Tablets
+- Mindestanforderungen: 4 GB RAM, 2-GHz-Prozessor
 
-- Operating systems: Windows, macOS, Android, iOS
-- Browsers: Chrome, Firefox, Safari, Edge
-- Dependencies: Backend services, third-party advertising services, payment gateways
+**Software-Anforderungen:**
 
-**Existing Functionalities:**
+- Betriebssysteme: Windows, macOS, Android, iOS
+- Browser: Chrome, Firefox, Safari, Edge
+- Abhängigkeiten: Backend-Dienste, Werbedienste von Drittanbietern, Zahlungsanbieter
 
-What features does the product offer – both existing and planned?
-- Registration and login
-- Product search with sorting function (e.g., by price), product categorization
-- Adding products to favorites
-- Adding products to the shopping cart
-- Order processing: Entering billing and shipping addresses, selecting payment method, calculating the total amount
+**Bestehende Funktionen:**
 
-**Planned Functionalities:**
-- Product rating system
-- Age verification for alcoholic beverages
-- Changes to shipping costs
+Welche Funktionen bietet das Produkt – sowohl bestehende als auch geplante?
+
+- Registrierung und Anmeldung
+- Produktsuche mit Sortierfunktion (z. B. nach Preis), Produktkategorisierung
+- Produkte zu Favoriten hinzufügen
+- Produkte in den Warenkorb legen
+- Bestellabwicklung: Rechnungs- und Lieferadresse eingeben, Zahlungsmethode auswählen, Gesamtbetrag berechnen
+
+**Geplante Funktionen:**
+- Produktbewertungssystem
+- Altersverifizierung für alkoholische Getränke
+- Änderungen der Versandkosten
 ---
 
-## **2. Draft Test Strategy**
-**Test Scope: (Scope of Testing)**
+## **2. Entwurf der Teststrategie**
+**Testumfang: (Testumfang)**
 
-**Included in the scope:**
+**Im Umfang enthalten:**
 
-- Registration & Login
-- Age restriction for account creation
-- Product search with sorting function (e.g., by price), product categorization
-- Adding products to favorites
-- Adding products to the shopping cart
-- Order processing: Entering billing and shipping address, selecting payment method, calculating total amount
+- Registrierung & Anmeldung: Nein
+- Altersbeschränkung für die Kontoerstellung: Ja
+- Alterseingabe- und Freigabeprozess: Ja
+- Produktsuche mit Sortierfunktion (z. B. nach Preis), Produktkategorisierung: Nein
+- Hinzufügen von Produkten zu Favoriten: Nein
+- Hinzufügen von Produkten zum Warenkorb: Ja
+- Bestellabwicklung: Eingabe von Rechnungs- und Lieferadresse, Auswahl der Zahlungsmethode: Nein
+- Berechnung des Gesamtbetrags: Ja
+- Berechnung und Änderung der Versandkosten: Ja
+- Product Rating System: Ja
+- Altersverifikation für alkoholische Produkte: Ja
 
-**Not included in the scope:**
-- Backend database operations
-- UI functions
+**Nicht im Umfang enthalten:**
 
-**Planned Test Types:**
+- Backend-Datenbankoperationen
+- UI-Funktionen
+- Security Tests
+- Nicht-funktionale Tests
 
-- Functional tests
-- Regression tests
-- Usability tests
+**Geplante Testarten:**
 
-**Risks, Problems, and Countermeasures:**
+- Funktionstests
+- Regressionstests
+- Usability-Tests
 
-**Development delays**
-- Countermeasure: Plan buffer time
+**Risiken, Probleme und Gegenmaßnahmen:**
 
-**Missing test data**
-- Countermeasure: Create test data (mock data)
+**Entwicklungsverzögerungen**
+- Gegenmaßnahme: Pufferzeit einplanen
 
-**Resource bottlenecks**
+**Fehlende Testdaten**
+- Gegenmaßnahme: Testdaten (Mock-Daten) erstellen
 
-- Countermeasure: Identify and schedule backup personnel
+**Ressourcenengpässe**
 
-**Test logistics (Test Responsibilities):**
+- Gegenmaßnahme: Ersatzpersonal identifizieren und einplanen
 
-- Test Manager: Thomas Breckenfelder
-- QA Engineer (Function & Regression): Thomas Breckenfelder
-- QA Engineer (Usability): Thomas Breckenfelder
-- End User for UAT (User Acceptance Test): Student
+**Testlogistik (Testverantwortlichkeiten):**
 
----
-
-## **3. Definition of Test Objectives**
-**Objectives:**
-
-- *Functionality:* Ensure that new and existing functions work as intended
-- *User Interface (GUI):* Verify usability, consistency, and error-free operation
-- *Usability:* Evaluate user-friendliness and accessibility
-
-**Expected Results:**
-
-- All existing and new functions behave according to the specification
-- The interface is intuitive, responsive, and error-free
-- The application is easy for end users to use; erroneous user input is displayed accordingly
+- Testmanager: Thomas Breckenfelder
+- QA-Ingenieur (Funktion & Regression): Thomas Breckenfelder
+- QA-Ingenieur (Usability): Thomas Breckenfelder
+- Endnutzer für UAT (Benutzerakzeptanztest): Student
 
 ---
 
-## **4. Defining Test Criteria**
-**Exit Criteria:**
+## **3. Definition der Testziele**
+**Ziele:**
 
-- **All planned tests**: were executed
-- **Execution Rate**: 100% of all test cases were executed
-- **Pass Rate**: At least 90% of the executed test cases passed
-- All critical and high-priority defects are closed
-- The User Acceptance Test (UAT) was completed and released
+- *Funktionalität:* Sicherstellen, dass neue und bestehende Funktionen wie vorgesehen funktionieren.
 
-**Suspension Criteria:**
 
-- Critical errors that block the continuation of testing (Severity 1)
-- Test environment failure (servers, database access)
-- Lack of resources (tools, hardware, personnel)
+**Erwartete Ergebnisse:**
 
-**Continuation Criteria:**
+- Alle bestehenden und neuen Funktionen verhalten sich gemäß der Spezifikation.
 
-- Release granted
-- Required tools and personnel are available again
-- Necessary test data has been created, corrected, or updated
+- Fehlerhafte Benutzereingaben werden entsprechend angezeigt.
 
 ---
 
-## **5. Resource Planning**
+## **4. Definition der Testkriterien**
+**Abbruchkriterien:**
 
-- **Personnel**: QA team, development team, end users for UAT
-- **Hardware:** PCs, laptops, tablets, smartphones
-- **Software:** Current browsers (Chrome, Firefox, Safari, Edge), operating systems (Windows, macOS, Android, iOS)
+- **Alle geplanten Tests** wurden ausgeführt.
 
-- **Infrastructure:** Test environments, automation tools, performance testing tools
+- **Ausführungsrate**: 100 % aller Testfälle wurden ausgeführt.
+
+- **Erfolgsrate**: Mindestens 90 % der ausgeführten Testfälle wurden bestanden.
+
+- Alle kritischen und hochprioritären Fehler wurden behoben.
+
+- Der Benutzerakzeptanztest (UAT) wurde abgeschlossen und freigegeben.
+
+**Abbruchkriterien:**
+
+- Kritische Fehler, die die Fortsetzung der Tests verhindern (Schweregrad 1).
+
+- Ausfall der Testumgebung (Server, Datenbankzugriff).
+
+- Fehlende Ressourcen (Tools, Hardware, Personal).
+
+**Fortsetzungskriterien:**
+
+- Freigabe erteilt.
+- Die benötigten Tools und das Personal sind wieder verfügbar.
+
+- Die erforderlichen Testdaten wurden erstellt, korrigiert oder aktualisiert.
+
+---
+
+## **5. Ressourcenplanung**
+
+- **Personal**: QA-Team, Entwicklungsteam, Endbenutzer für UAT
+- **Hardware:** PCs, Laptops, Tablets, Smartphones
+- **Software:** Gängige Browser (Chrome, Firefox, Safari, Edge), Betriebssysteme (Windows, macOS, Android, iOS)
+
+- **Infrastruktur:** Testumgebungen, Automatisierungstools
 ---
 
 ## **6. Testumgebung planen**
 **Testgeräte**: Realgeräte mit echten Betriebssystemen und Browsern zur realitätsnahen Simulation
-- NB MacBook Air 13“/16/256
-- OS Sequoia 15.6.1
+- Hardware1: MacBook Air 13“/16GB/256GB
+- Betriebssystem: Sequoia 15.6.1
 - Browser: Chrome für Mac
 
-**Umgebungen:** 
+- Hardware2: Lenovo P52/15"/64GB/256GB
+- Betriebssystem: Windows 11 Pro
+- Browser: Chrome für Windows
+
+- Hardware3: iPad mini 7.9"/1GB/128GB
+- Betriebssystem: iOS 9
+- Browser: Safari
+
+**Umgebungen:**
 - Entwicklung (DEV)
 - TEST (Test)
 - Abnahme (ACC - Acceptance)
 
 ---
 
-## **7. Schedule and Effort Estimate**
+## **7. Zeitplan und Aufwandsschätzung**
 
 
+| Aktivität                                        | Startdatum | Enddatum   | Umgebung | Verantwortlich | Geplanter Aufwand |
+|--------------------------------------------------|------------|------------| -------- |----------------|-------------------|
+| Testplanung                                      | 06.11.2025 | 11.11.2025 | Alle     | TB             | 7 Stunden         |
+| Testfalldesign                                   | 12.11.2025 | 12.11.2025 | Alle     | TB             | 7 Stunden         |
+| Unittest (nur Erweiterungen)                     | 13.11.2025 | 13.11.2025 | TEST     | TB             | 7 Stunden         |
+| Integrationstest (Zusammenspiel der neuen Module) | 14.11.2025 | 14.11.2025 | TEST     | TB             | 5 Stunden         |
+| Systemtest                                       | 17.11.2025 | 17.11.2025 | TEST     | TB             | 7 Stunden         |
+| Teil-Regressions-Test (von Änderungen betroffen) | 18.11.2025 | 18.11.2025 | ACC      | TB             | 3 Stunden         |
+| Abnahmetest (UAT)                                | 18.11.2025 | 18.11.2025 | TEST     | PB             | 2 Stunden         |
+| Dokumentation                                    | 19.11.2025 | 19.11.2025 | ACC      | TB             | 2 Stunden         |
 
-| Aktivität                                                    | Startdatum | Enddatum   | Umgebung | Verantwortlich | Geplanter Aufwand |
-|--------------------------------------------------------------|------------|------------| -------- |----------------|-------------------|
-| Testplanung                                                  | 06.11.2025 | 06.11.2025 | Alle     | TB             | 7 Stunden         |
-| Testfalldesign                                               | 07.11.2025 | 07.11.2025 | Alle     | TB             | 7 Stunden         |
-| Unittest (nur Erweiterungen)                                 | 08.11.2025 | 08.11.2025 | TEST     | TB             | 7 Stunden         |
-| Integrationstest (Zusammenspiel der neuen Module)            | 09.11.2025 | 09.11.2025 | TEST     | TB             | 5 Stunden         |
-| Systemtest                                                   | 10.11.2025 | 10.11.2025 | TEST     | TB             | 7 Stunden         |
-| Teil-Regressions-Test (die von denÄnderungen betroffen sind) | 11.11.2025 | 11.11.2025 | ACC      | TB             | 3 Stunden         |
-| Abnahmetest (UAT)                                            | 11.11.2025 | 11.11.2025 | TEST     | PB             | 2 Stunden         |
-| Dokumentation                                                | 11.11.2025 | 12.11.2025 | ACC      | TB             | 2 Stunden         |
-
-
+------------------------------------
