@@ -35,7 +35,7 @@ Nutzer sollen zusätzlich ein schriftliches Feedback hinterlassen können.
 Besser:
 
 **Konkret formulierte** Anforderung:
-* **Frage 1:** Erst wenn der Kauf des Produkts  abgeschlossen ist können Bewertungen abgegeben werden.
+* **Frage 1:** Erst wenn der Kauf des Produkts abgeschlossen ist können Bewertungen abgegeben werden.
 * **Frage 2:** Die abgegebene Bewertung soll angezeigt werden, wenn der Artikel im Shop erneut angezeigt wird.
 * **Frage 3:** Der Nutzer darf eine abgegebene Bewertung nicht löschen oder ändern.
 
@@ -50,27 +50,27 @@ Besser:
 Alkoholische Produkte erfordern eine Altersverifikation. 
 
 **Vage formulierte** Anforderung:
-* **Frage 1:** Wann soll das A-Modal aufgerufen werden?
+* **Frage 1:** Wird nach Eingabe des Geburtsjahres das Alter automatisch berechnet?
 * **Frage 2:** Muss ein einmal registrierter Nutzer immer wieder das Modal ausfüllen?
-* **Frage 3:** Wird eine Identitätsprüfung durchgeführt?
+* **Frage 3:** Wie reduziere ich versehentliche Falscheingaben?
 
 Beim Aufrufen der Kategorie soll ein Modal erscheinen, in dem Nutzer ihr Alter angeben müssen (18+), bevor sie Zugriff erhalten.
 
 **Vage formulierte** Anforderung:
-* **Frage 4:** Kann das Modal umgangen werden?
+* **Frage 4:** Was passiert, wenn der Geburtstagsinput nicht erfolgt?
 * **Frage 5:** In welchem Format soll das Geburtsdatum angegeben werden? 
 * **Frage 6:** Was passiert bei der Bestätigung des Nutzers < 18J? 
 
 Besser:
 
 **Konkret formulierte** Anforderung:
-* **Frage 1:** Sobald die Kategorie „Alkoholische Produkte“ oder ein Produkt dieser Kategorie aufgerufen wird, muss das A-Modal angezeigt werden.
-* **Frage 2:** Das System speichert die Bestätigung („18+“) lokal im Browser (z. B. Cookie oder Local Storage) für eine definierte Dauer (z. B.14 Tage), sodass das Modal nicht bei jedem Aufruf erneut erscheint. Danach erscheint das Modal erneut.
-* **Frage 3:** Die Altersverifikation dient ausschließlich der Zugangsbeschränkung, nicht der Identitätsprüfung.
+* **Frage 1:** Nach Eingabe des Geburtstages erfolgt die Altersberechnung. Nur wenn das errechnete Alter ≥ 18 Jahre ist, darf der Zugriff auf alkoholische Produkte erlaubt werden. Sonst Nachricht JuSchG und Funktion Sperrung Plausibilitätsprüfung).
+* **Frage 2:** Das System speichert die Bestätigung („18+“) lokal im Browser (z. B. Cookie) für eine definierte Dauer (z. B. 24 Std.), sodass das Modal nicht bei jedem Aufruf erneut erscheint. Danach erscheint das Modal erneut.
+* **Frage 3:** Nach Eingabe des Geburtstages erfolgt ein weiterer Schritt. "Ich bestätige, dass das eingegebene Geburtsjahr korrekt ist und ich über 18 Jahre alt bin".
 
-* **Frage 4:** Das Modal soll den Seiteninhalt blockieren, bis eine Auswahl getroffen wurde.
-* **Frage 5:** Das Geburtsdatum soll im Format {TTMMJJJJ} angegeben werden.
-* **Frage 6:** Bei der Bestätigung („< 18“) wird der Nutzer auf eine Seite ohne alkoholische Inhalte weitergeleitet (z. B. Startseite).
+* **Frage 4:** Das Modal soll den Seiteninhalt so lange blockieren, bis ein Geburtstag eingegeben wurde.
+* **Frage 5:** Das Geburtsdatum soll im Format {TT-MM-JJJJ} angegeben werden.
+* **Frage 6:** Bei der Bestätigung („< 18“) wird der Nutzer auf eine Seite ohne alkoholische Inhalte weitergeleitet (z. B. Startseite) oder zurück zu seinem Warenkorb (ohne Alc.).
 
 ---
 

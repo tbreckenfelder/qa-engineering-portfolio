@@ -120,7 +120,7 @@ Welche Funktionen bietet das Produkt – sowohl bestehende als auch geplante?
 
 - **Erfolgsrate**: Mindestens 90 % der ausgeführten Testfälle wurden bestanden.
 
-- Alle kritischen und hochprioritären Fehler wurden behoben.
+- Alle kritischen und hoch priorisierten Fehler wurden behoben.
 
 - Der Benutzerakzeptanztest (UAT) wurde abgeschlossen und freigegeben.
 
@@ -156,9 +156,11 @@ Welche Funktionen bietet das Produkt – sowohl bestehende als auch geplante?
 - Betriebssystem: Sequoia 15.6.1
 - Browser: Chrome für Mac
 
+
 - Hardware2: Lenovo P52/15"/64GB/256GB
 - Betriebssystem: Windows 11 Pro
-- Browser: Chrome für Windows
+- Browser: Opera für Windows
+
 
 - Hardware3: iPad mini 7.9"/1GB/128GB
 - Betriebssystem: iOS 9
