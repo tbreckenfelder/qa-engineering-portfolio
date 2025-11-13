@@ -100,7 +100,7 @@ Welche Funktionen bietet das Produkt – sowohl bestehende als auch geplante?
 ## **3. Definition der Testziele**
 **Ziele:**
 
-- *Funktionalität:* Sicherstellen, dass neue und bestehende Funktionen wie vorgesehen funktionieren.
+- **Funktionalität:** Sicherstellen, dass neue und bestehende Funktionen wie vorgesehen funktionieren.
 
 
 **Erwartete Ergebnisse:**
@@ -188,3 +188,14 @@ Welche Funktionen bietet das Produkt – sowohl bestehende als auch geplante?
 | Dokumentation                                    | 19.11.2025 | 19.11.2025 | ACC      | TB             | 2 Stunden         |
 
 ------------------------------------
+
+## **8. Testergebnisse festlegen**
+
+Dokumente/Tools, die zur Unterstützung der Testaktivitäten im Projekt erstellt werden müssen:
+
+- Testplan / test plan (GitHub)
+- Testfälle und Testskripte / test case design (GitHub)
+- Testdaten / functional test execution (GitHub)
+- Testberichte / test reporting (GitHub)
+- Fehlerberichte (GitHub)
+- Abnahmedokument für Benutzertests (GitHub)
