@@ -152,17 +152,17 @@ Welche Funktionen bietet das Produkt – sowohl bestehende als auch geplante?
 
 ## **6. Testumgebung planen**
 **Testgeräte**: Realgeräte mit echten Betriebssystemen und Browsern zur realitätsnahen Simulation
-- Hardware1: MacBook Air 13“/16GB/256GB
+- **Hardware1:** MacBook Air 13“/16GB/256GB
 - Betriebssystem: Sequoia 15.6.1
 - Browser: Chrome für Mac
 
 
-- Hardware2: Lenovo P52/15"/64GB/256GB
+- **Hardware2:** Lenovo P52/15"/64GB/256GB
 - Betriebssystem: Windows 11 Pro
 - Browser: Opera für Windows
 
 
-- Hardware3: iPad mini 7.9"/1GB/128GB
+- **Hardware3:** iPad mini 7.9"/1GB/128GB
 - Betriebssystem: iOS 9
 - Browser: Safari
 
@@ -176,12 +176,12 @@ Welche Funktionen bietet das Produkt – sowohl bestehende als auch geplante?
 ## **7. Zeitplan und Aufwandsschätzung**
 
 
-| Aktivität                                        | Startdatum | Enddatum   | Umgebung | Verantwortlich | Geplanter Aufwand |
-|--------------------------------------------------|------------|------------| -------- |----------------|-------------------|
+| Aktivität                                        | Startdatum | Enddatum  | Umgebung | Verantwortlich | Geplanter Aufwand |
+|--------------------------------------------------|------------|-----------| -------- |----------------|-------------------|
 | Testplanung                                      | 06.11.2025 | 11.11.2025 | Alle     | TB             | 7 Stunden         |
 | Testfalldesign                                   | 12.11.2025 | 12.11.2025 | Alle     | TB             | 7 Stunden         |
 | Unittest (nur Erweiterungen)                     | 13.11.2025 | 13.11.2025 | TEST     | TB             | 7 Stunden         |
-| Integrationstest (Zusammenspiel der neuen Module) | 14.11.2025 | 14.11.2025 | TEST     | TB             | 5 Stunden         |
+| Integrationstest (Zusammenspiel der neuen Module) | 14.11.2025 | 14.11.2025| TEST     | TB             | 5 Stunden         |
 | Systemtest                                       | 17.11.2025 | 17.11.2025 | TEST     | TB             | 7 Stunden         |
 | Teil-Regressions-Test (von Änderungen betroffen) | 18.11.2025 | 18.11.2025 | ACC      | TB             | 3 Stunden         |
 | Abnahmetest (UAT)                                | 18.11.2025 | 18.11.2025 | TEST     | PB             | 2 Stunden         |
