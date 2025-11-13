@@ -2,6 +2,7 @@
 
 --- 
 Webshop: https://grocerymate.masterschool.com/
+Webshop: https://grocerymate.masterschool.com/auth
 
 Mit folgenden Basisfunktionen:
 
