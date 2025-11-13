@@ -64,7 +64,7 @@ Beim Aufrufen der Kategorie soll ein Modal erscheinen, in dem Nutzer ihr Alter a
 Besser:
 
 **Konkret formulierte** Anforderung:
-* **Frage 1:** Nach Eingabe des Geburtstages erfolgt die Altersberechnung. Nur wenn das errechnete Alter ≥ 18 Jahre ist, darf der Zugriff auf alkoholische Produkte erlaubt werden. Sonst Nachricht JuSchG und Funktion Sperrung Plausibilitätsprüfung).
+* **Frage 1:** Nach Eingabe des Geburtstages erfolgt die Altersberechnung. Nur wenn das errechnete Alter ≥ 18 Jahre ist, darf der Zugriff auf alkoholische Produkte erlaubt werden. Sonst Nachricht JuSchG und Funktion Sperrung (Plausibilitätsprüfung).
 * **Frage 2:** Das System speichert die Bestätigung („18+“) lokal im Browser (z. B. Cookie) für eine definierte Dauer (z. B. 24 Std.), sodass das Modal nicht bei jedem Aufruf erneut erscheint. Danach erscheint das Modal erneut.
 * **Frage 3:** Nach Eingabe des Geburtstages erfolgt ein weiterer Schritt. "Ich bestätige, dass das eingegebene Geburtsjahr korrekt ist und ich über 18 Jahre alt bin".
 
@@ -84,6 +84,6 @@ Für Bestellungen über einem bestimmten Wert entfallen die Versandkosten. Für 
 * **Frage 3:** Was passiert, wenn ein Nutzer Produkte entfernt oder hinzufügt – werden die Versandkosten sofort neu berechnet und angezeigt?
 
 **Konkret formulierte** Anforderung:
-* **Frage 1:** Die Versandkosten entfallen ab einem Bestellwert von >= 20€.
+* **Frage 1:** Die Versandkosten entfallen ab einem Bestellwert von >= 20 €.
 * **Frage 2:** Die Versandkosten pro Bestellung oder pro Artikel werden berechnet, bevor geprüft wird, ob der Schwellenwert erreicht ist.
 * **Frage 3:** Fügt ein Nutzer Produkte hinzu oder löscht – werden die Versandkosten sofort neu berechnet und angezeigt,
